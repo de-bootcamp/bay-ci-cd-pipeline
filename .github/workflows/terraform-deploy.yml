@@ -15,7 +15,7 @@ jobs:
           repository: baymijid/Projects_terraform
           ref: main
 
-      - name: Change directory to Terraform
+      - name: Change directory to terraform-demo
         run: cd terraform-demo && ls -ltra
 
       - name: Setup Terraform
