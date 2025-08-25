@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Terraform repo
         uses: actions/checkout@v4
         with:
-          repository: bay/projects
+          repository: baymijid/Projects_terraform
           ref: main
 
       - name: Change directory to Terraform
