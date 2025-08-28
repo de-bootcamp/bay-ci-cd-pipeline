@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Terraform repo
         uses: actions/checkout@v4
         with:
-          repository: bukhbayar/capstone-data-engineering
+          repository: baymijid/Projects_terraform
           ref: main
 
       - name: Setup AWS CLI
