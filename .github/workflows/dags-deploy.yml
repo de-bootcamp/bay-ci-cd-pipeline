@@ -14,8 +14,8 @@ jobs:
           repository: baymijid/Projects_terraform
           ref: main
 
-      - name: Change directory to terraform_demo
-        run: cd terraform_demo && ls -ltra
+      - name: Change directory to terraform-demo
+        run: cd terraform-demo && ls -ltra
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -33,7 +33,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init
-        run: cd terraform_demo && terraform init
+        run: cd terraform-demo && terraform init
 
       - name: Terraform Plan
         env:
@@ -41,7 +41,7 @@ jobs:
           TF_VAR_create_database: true
           TF_VAR_create_airflow: true
           TF_VAR_deploy_dags: true
-        run: cd terraform_demo && terraform plan
+        run: cd terraform-demo && terraform plan
 
       - name: Terraform Apply
         env:
@@ -49,4 +49,4 @@ jobs:
           TF_VAR_create_database: true
           TF_VAR_create_airflow: true
           TF_VAR_deploy_dags: true
-        run: cd terraform_demo && terraform apply -auto-approve
+        run: cd terraform-demo && terraform apply -auto-approve
